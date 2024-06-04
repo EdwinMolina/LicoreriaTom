@@ -1,0 +1,65 @@
+﻿@model IEnumerable<LicoreriaTom.Models.Producto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<h4 class="text-center my-4">Productos</h4>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-success">
+        <i class="fa-solid fa-plus"></i> Nuevo producto
+    </a>
+</p>
+<!--Tabla para mostrar los registros-->
+<table class="table table-hover table-sm">
+
+    <thead class="bg-opacity-25 bg-secondary">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Codigo)</th>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Precio)</th>
+            <th>@Html.DisplayNameFor(model => model.Existencias)</th>
+            <th>Cátegoria</th>
+            <th>@Html.DisplayNameFor(model => model.NivelDemanda.NivelProducto)</th>
+            <th>Tipo</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Precio)</td>
+                <td>@Html.DisplayFor(modelItem => item.Existencias)</td>
+                <td>@Html.DisplayFor(modelItem => item.Categoria.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.NivelDemanda.NivelProducto)</td>
+                <td>@Html.DisplayFor(modelItem => item.TipoProducto.Descripcion)</td>
+
+                <td class="d-flex justify-content-center">
+                    <div class="btn-group" role="group">
+
+                        <a href="@Url.Action("Delete", new { id = item.Id})" class="btn btn-outline-danger" title="Eliminar">
+                            <span class="fas fa-trash-alt"></span>
+                        </a>
+
+                        <a href="@Url.Action("Edit", new { id = item.Id})" class="btn btn-outline-primary" title="Editar">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+
+                        <a href="@Url.Action("Details", new { id = item.Id})" class="btn btn-outline-secondary" title="Detalles">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </a>
+
+                    </div>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

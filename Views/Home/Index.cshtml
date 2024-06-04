@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+
+}
+
+<main class="container admin-dashboard">
+    <!-- Title Section -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="my-4">Panel de Administración</h1>
+        </div>
+    </div>
+
+    <!-- Quick Actions Section -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gestionar Categorías</h5>
+                    <p class="card-text">Añadir, editar o eliminar categorías de productos.</p>
+                    <a href="/CategoriasWeb" class="btn btn-primary">Ir a Categorías</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gestionar Productos</h5>
+                    <p class="card-text">Añadir, editar o eliminar productos en el inventario.</p>
+                    <a href="/ProductosWeb" class="btn btn-primary">Ir a Productos</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gestionar Ventas</h5>
+                    <p class="card-text">Ver y gestionar las ventas, añadir, editar o eliminar.</p>
+                    <a href="/VentasWeb" class="btn btn-primary">Ir a Ventas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seccion Dinamica con valores de registro -->
+    <div class="row my-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Categorías</h5>
+                    <p class="card-text display-4 fw-bold">@ViewBag.TotalCategorias</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total de Productos</h5>
+                    <p class="card-text display-4 fw-bold">@ViewBag.TotalProductos</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ventas Totales</h5>
+                    <p class="card-text display-4 fw-bold">@ViewBag.TotalVentas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seccion con valores estaticos -->
+    <div class="row my-5">
+        <div class="col-md-12">
+            <h2>Actividades Recientes</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Acción</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>03/06/2024</td>
+                        <td>Se añadió una nueva categoría: Vinos</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>02/06/2024</td>
+                        <td>Se actualizó el stock del producto: Whisky</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>01/06/2024</td>
+                        <td>Se eliminó un pedido: #12345</td>
+                        <td>Admin</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+

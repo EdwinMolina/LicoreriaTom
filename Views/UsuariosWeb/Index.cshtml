@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LicoreriaTom.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h4 class="text-center my-4">Usuarios</h4>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-success">
+        <i class="fa-solid fa-plus"></i> Nuevo Usuario
+    </a>
+</p>
+
+<table class="table table-hover table-sm">
+
+    <thead class="bg-opacity-25 bg-secondary">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.User)</th>
+            <th>@Html.DisplayNameFor(model => model.Contraseña)</th>
+            <th>@Html.DisplayNameFor(model => model.Rol.TipoRol)</th>
+            <th>Trabajador</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.User)</td>
+                <td>@Html.DisplayFor(modelItem => item.Contraseña)</td>
+                <td>@Html.DisplayFor(modelItem => item.Rol.TipoRol)</td>
+                <td>@Html.DisplayFor(modelItem => item.Trabajador.Nombre)</td>
+
+                <td class="d-flex justify-content-center">
+                    <div class="btn-group" role="group">
+
+                        <a href="@Url.Action("Delete", new { id = item.Id})" class="btn btn-outline-danger" title="Eliminar">
+                            <span class="fas fa-trash-alt"></span>
+                        </a>
+                        <a href="@Url.Action("Edit", new { id = item.Id})" class="btn btn-outline-primary" title="Editar">
+                            <i class="fa-solid fa-pen"></i>
+                        </a>
+                        <a href="@Url.Action("Details", new { id = item.Id})" class="btn btn-outline-secondary" title="Detalles">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

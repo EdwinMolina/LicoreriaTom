@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0fb175db8bd6455aa010df99b10f45d0" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TicTomModel.Categoria" Width="1.5" PointX="4.875" PointY="1.75" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Cliente" Width="1.5" PointX="4.875" PointY="16.875" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Compra" Width="1.5" PointX="7.75" PointY="9.875" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.DetalleCompra" Width="1.5" PointX="7.75" PointY="6.25" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.DetalleVenta" Width="1.5" PointX="12.25" PointY="10.75" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Financiamiento" Width="1.875" PointX="15.125" PointY="10.75" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.NivelDemanda" Width="1.5" PointX="10.125" PointY="1.375" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Producto" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Proveedor" Width="1.5" PointX="10.625" PointY="6.375" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Rol" Width="1.5" PointX="3.625" PointY="10.375" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.TipoProducto" Width="1.5" PointX="4.75" PointY="4.375" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Trabajador" Width="1.5" PointX="7.75" PointY="13.125" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Usuario" Width="1.5" PointX="5" PointY="13.125" IsExpanded="true" FillColor="Green" />
+        <EntityTypeShape EntityType="TicTomModel.Venta" Width="1.5" PointX="7.75" PointY="16.75" IsExpanded="true" FillColor="Green" />
+        <AssociationConnector Association="TicTomModel.FK_CategoriaProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_ClienteVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_CompraDetalleCompra" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_TrabajadorCompra" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_DetalleCompraProveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_ProductoDetalleCompra" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_FinanciamientoDetalleVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_ProductoDetalleVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_VentaDetalleVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_NivelDemandaProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_TipoProducto" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_RolUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_TrabajadorVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="TicTomModel.FK_UsuarioTrabajador" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
